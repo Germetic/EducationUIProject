@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MenuButtons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f19a5b7ba7e31bc4a891efbc24a0baae, type: 3}
+    - {fileID: 2800000, guid: 8286a57766a04e548a5944a4986fc58e, type: 3}
+    - {fileID: 2800000, guid: 55066e403a8a3e9488183165e5d7a9fc, type: 3}
+    - {fileID: 2800000, guid: 26258c2404a80894a809a4f6128bce31, type: 3}
+    - {fileID: 2800000, guid: 6f2355be843fa7e40b48e699623b268d, type: 3}
+    - {fileID: 2800000, guid: 22b5a8181e0bdef4781fcc8ce831d293, type: 3}
+    - {fileID: 2800000, guid: 092f37969cd6fca4baefbd921b30c845, type: 3}
+    - {fileID: 2800000, guid: a7fb34f109c0eec418070fe79a6cad42, type: 3}
+    - {fileID: 2800000, guid: a625249b473413e45bf3db85508d94a6, type: 3}
+    - {fileID: 2800000, guid: 16bde417b91e0354bb00d41098ef1593, type: 3}
+    - {fileID: 2800000, guid: 651adb2a0e2b5054eaabf1f236ba3c4e, type: 3}
+    - {fileID: 2800000, guid: 8da926e866194714d81bbe81eade9ace, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 55066e403a8a3e9488183165e5d7a9fc, type: 3}
+  - {fileID: 21300000, guid: a7fb34f109c0eec418070fe79a6cad42, type: 3}
+  - {fileID: 21300000, guid: 26258c2404a80894a809a4f6128bce31, type: 3}
+  - {fileID: 21300000, guid: 092f37969cd6fca4baefbd921b30c845, type: 3}
+  - {fileID: 21300000, guid: 16bde417b91e0354bb00d41098ef1593, type: 3}
+  - {fileID: 21300000, guid: 8286a57766a04e548a5944a4986fc58e, type: 3}
+  - {fileID: 21300000, guid: 22b5a8181e0bdef4781fcc8ce831d293, type: 3}
+  - {fileID: 21300000, guid: 8da926e866194714d81bbe81eade9ace, type: 3}
+  - {fileID: 21300000, guid: 651adb2a0e2b5054eaabf1f236ba3c4e, type: 3}
+  - {fileID: 21300000, guid: f19a5b7ba7e31bc4a891efbc24a0baae, type: 3}
+  - {fileID: 21300000, guid: a625249b473413e45bf3db85508d94a6, type: 3}
+  - {fileID: 21300000, guid: 6f2355be843fa7e40b48e699623b268d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SPR_DEFENCE
+  - SPR_NOTIFICATIONS
+  - SPR_MENU
+  - SPR_MYWISH
+  - SPR_SETTINGS
+  - SPR_CARDS
+  - SPR_MYAPPS
+  - SPR_RECCOMENDATION
+  - SPR_SUBSCRIPTION
+  - SPR_ACCOUNT
+  - SPR_OPTIONS
+  - SPR_MICROPHONE
+  m_Tag: MenuButtons
+  m_IsVariant: 0
