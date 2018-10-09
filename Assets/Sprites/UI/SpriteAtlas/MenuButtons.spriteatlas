@@ -41,10 +41,16 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 16bde417b91e0354bb00d41098ef1593, type: 3}
     - {fileID: 2800000, guid: 651adb2a0e2b5054eaabf1f236ba3c4e, type: 3}
     - {fileID: 2800000, guid: 8da926e866194714d81bbe81eade9ace, type: 3}
+    - {fileID: 2800000, guid: 2385166a569d3954888bd4c34eaaee68, type: 3}
+    - {fileID: 2800000, guid: 8a970679c541b5e4d99e2ab6bccd57c9, type: 3}
+    - {fileID: 2800000, guid: 24a580dd20fe1414e92357585a2c6db4, type: 3}
+    - {fileID: 2800000, guid: 5d9fe850b529377498c33d41ebf821d3, type: 3}
+    - {fileID: 2800000, guid: 6551204c1aa670341aceb5565beb19f8, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 55066e403a8a3e9488183165e5d7a9fc, type: 3}
+  - {fileID: 21300000, guid: 5d9fe850b529377498c33d41ebf821d3, type: 3}
   - {fileID: 21300000, guid: a7fb34f109c0eec418070fe79a6cad42, type: 3}
   - {fileID: 21300000, guid: 26258c2404a80894a809a4f6128bce31, type: 3}
   - {fileID: 21300000, guid: 092f37969cd6fca4baefbd921b30c845, type: 3}
@@ -52,12 +58,17 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 8286a57766a04e548a5944a4986fc58e, type: 3}
   - {fileID: 21300000, guid: 22b5a8181e0bdef4781fcc8ce831d293, type: 3}
   - {fileID: 21300000, guid: 8da926e866194714d81bbe81eade9ace, type: 3}
+  - {fileID: 21300000, guid: 8a970679c541b5e4d99e2ab6bccd57c9, type: 3}
   - {fileID: 21300000, guid: 651adb2a0e2b5054eaabf1f236ba3c4e, type: 3}
+  - {fileID: 21300000, guid: 2385166a569d3954888bd4c34eaaee68, type: 3}
   - {fileID: 21300000, guid: f19a5b7ba7e31bc4a891efbc24a0baae, type: 3}
   - {fileID: 21300000, guid: a625249b473413e45bf3db85508d94a6, type: 3}
+  - {fileID: 21300000, guid: 6551204c1aa670341aceb5565beb19f8, type: 3}
+  - {fileID: 21300000, guid: 24a580dd20fe1414e92357585a2c6db4, type: 3}
   - {fileID: 21300000, guid: 6f2355be843fa7e40b48e699623b268d, type: 3}
   m_PackedSpriteNamesToIndex:
   - SPR_DEFENCE
+  - SPR_Star
   - SPR_NOTIFICATIONS
   - SPR_MENU
   - SPR_MYWISH
@@ -65,9 +76,13 @@ SpriteAtlas:
   - SPR_CARDS
   - SPR_MYAPPS
   - SPR_RECCOMENDATION
+  - SPR_GoBackArrow
   - SPR_SUBSCRIPTION
+  - SPR_Downloads
   - SPR_ACCOUNT
   - SPR_OPTIONS
+  - SPR_RoundedButton_0
+  - SPR_RoundedBlock_0
   - SPR_MICROPHONE
   m_Tag: MenuButtons
   m_IsVariant: 0

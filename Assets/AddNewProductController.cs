@@ -7,10 +7,8 @@ using UnityEngine.UI;
 
 public class AddNewProductController : MonoBehaviour {
 
-    public string JsonFileName;
-    [Space]
     public Text HeaderText;
-    public Texture2D Icon;
+    public Sprite Icon;
     [Space]
     public InputField NameFld;
     public InputField DescriptionFld;
@@ -20,21 +18,17 @@ public class AddNewProductController : MonoBehaviour {
     [Space]
     public Toggle IsRecommendTgl;
     public Dropdown CategoryDPD;
-    public Dropdown BlockTypeDPD;
+    public InputField BlockTypeFld;
     public Button AddProductBtn;
     public Button CreateJsonBtn;
     public Button ReadBtn;
 
     public Products CreatedProducts;
 
-    private string _path;
-
     private void Awake()
-    {
+    {          
         AddProductBtn.onClick.AddListener(AddNewProduct);
         CreateJsonBtn.onClick.AddListener(CreateJson);
-        ReadBtn.onClick.AddListener(ReadJson);
-        _path = Application.streamingAssetsPath;
     }
     public void CreateJson()
     {
@@ -50,7 +44,7 @@ public class AddNewProductController : MonoBehaviour {
             return;
         }
         HeaderText.text = "Success";
-        byte[] icon = Icon.EncodeToPNG();
+        byte[] icon = ImageConverter.ConvertToByte(Icon);
         Product product = new Product(
             icon,
             NameFld.text,
@@ -60,7 +54,7 @@ public class AddNewProductController : MonoBehaviour {
             Int32.Parse(SizeFld.text),
             Int32.Parse(DownloadsFld.text),
             (Product.Categories)CategoryDPD.value,
-            (Product.BlockTypes)BlockTypeDPD.value
+            BlockTypeFld.text
             );
         CreatedProducts.AllProducts.Add(product);
         NameFld.text = "";
@@ -70,12 +64,11 @@ public class AddNewProductController : MonoBehaviour {
         DownloadsFld.text = "";
     }
 
-    public void ReadJson()
+    public Products ReadJson(string jsonFileName)
     {
-        string path = _path + "//" + JsonFileName + ".json";
-        string jsonString = File.ReadAllText(path);
-        Debug.Log(jsonString);
-        Products products = JsonUtility.FromJson<Products>(jsonString);
-        Debug.Log(products.ToString());
+        TextAsset loadedFile = Resources.Load<TextAsset>(jsonFileName);
+        Products products = JsonUtility.FromJson<Products>(loadedFile.text);
+        return products;
     }
+
 }
