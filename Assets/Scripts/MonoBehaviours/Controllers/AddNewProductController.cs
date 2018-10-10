@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AddNewProductController : MonoBehaviour {
 
     public Text HeaderText;
-    public Sprite Icon;
+    public InputField IconUrl;
     [Space]
     public InputField NameFld;
     public InputField DescriptionFld;
@@ -37,20 +37,21 @@ public class AddNewProductController : MonoBehaviour {
         string path = Application.persistentDataPath + "//" + NameFld.text + ".json";
         string jsonData = JsonUtility.ToJson(CreatedProducts);
         File.WriteAllText(path, jsonData);
+        Debug.Log("<color=orange><b> Json file created, </b></color>" + path);
     }
 
     public void AddNewProduct()
     {
-        if (Icon == null)
+        if (IconUrl.text == "")
         {
             HeaderText.text = "SET IMAGE IN EDITOR";
             return;
         }
 
-        HeaderText.text = "Success";
-        byte[] icon = ImageConverter.ConvertToByte(Icon);
+        HeaderText.text = "Success";       
+        
         Product product = new Product(
-            icon,
+            IconUrl.text,
             NameFld.text,
             DescriptionFld.text,
             IsRecommendTgl.isOn,
@@ -63,9 +64,8 @@ public class AddNewProductController : MonoBehaviour {
         CreatedProducts.AllProducts.Add(product);
         NameFld.text = "";
         DescriptionFld.text = "";
-        RatingFld.text = "";
-        SizeFld.text = "";
-        DownloadsFld.text = "";
+
+        Debug.Log("<color=Green><b> Added , Products.Count : </b></color>" + CreatedProducts.AllProducts.Count);
     }
     
     public Products ReadJson(string jsonFileName)
@@ -74,5 +74,4 @@ public class AddNewProductController : MonoBehaviour {
         Products products = JsonUtility.FromJson<Products>(loadedFile.text);
         return products;
     }
-
 }

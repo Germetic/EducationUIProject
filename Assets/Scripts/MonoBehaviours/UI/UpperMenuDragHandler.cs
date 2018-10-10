@@ -8,14 +8,8 @@ public class UpperMenuDragHandler : MonoBehaviour, IBeginDragHandler ,IDragHandl
 {
     public UpperMenuBehaviourController UpperMenuBehaviourController;
 
-    private ScrollRect _scrollRect;
     private Vector2 _startTouchPosition;
     private float _lastTouchYPosition;
-
-    public void Awake()
-    {
-        _scrollRect = GetComponent<ScrollRect>();       
-    }
 
     public void OnBeginDrag(PointerEventData data)
     {

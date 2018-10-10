@@ -13,7 +13,7 @@ public class AppBlockController : MonoBehaviour
 
     public void Initialize(Product product)
     {
-        Icon.sprite = ImageConverter.GetSpriteFromByte(product.Icon);
+        ImageDrawer.Instance.DrawImage(product.Icon,Icon);
         Product = product;
         Title.text = product.Title;
         IsRecommendArrow.SetActive(product.IsRecommend);

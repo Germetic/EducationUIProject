@@ -32,7 +32,7 @@ public class DetailAppPanel : MonoBehaviour
     {
         CurrentProduct = product;
         Show();
-        Icon.sprite = ImageConverter.GetSpriteFromByte(product.Icon);
+        ImageDrawer.Instance.DrawImage(product.Icon, Icon);
         Category.text = product.Category.ToString();
         SubCategory.text = product.SubCategory;
         Title.text = product.Title;

@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AppBlockSpawnController : MonoBehaviour
-{
+{   
     public AddNewProductController AddNewProductController;
     public GameObject CategoryBlockPrefab;
     public GameObject AppBlockPrefab;
     public Transform Content;
 
+    [Header("Json file name to load")]
+    [SerializeField]
+    private string _jsonFileName;
     private List<string> _subCategoriesToSpawn;
     private Products _products;
 
@@ -34,13 +37,17 @@ public class AppBlockSpawnController : MonoBehaviour
         _subCategoriesToSpawn = new List<string>();
     }
 
-    private void Start()
+    private void LoadProducts()
     {
-        _products = AddNewProductController.ReadJson("fixeddb");
+        _products = AddNewProductController.ReadJson(_jsonFileName);
     }
 
     private void CreateSubcategoriesList(Product.Categories chosedCategory)
-    {
+    {   
+        if(_products == null)
+        {
+            LoadProducts();
+        }
         _subCategoriesToSpawn.Clear();
 
         for (int i = 0; i < _products.AllProducts.Count; i++)

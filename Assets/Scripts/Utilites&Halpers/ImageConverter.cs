@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ImageConverter
 {
@@ -38,4 +40,8 @@ public class ImageConverter
             return null;
         }
     }
+    public static void GetImageFromUrl()
+    {
+
+    }   
 }

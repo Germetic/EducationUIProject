@@ -18,7 +18,6 @@ public class UpperMenuBehaviourController : MonoBehaviour {
     [SerializeField]
     private RectTransform _appPanelContent;
 
-    private ScrollRect _appPanelScrollRect;
     private bool _canHideSearchPanel = false;
     private bool _isSearchPanelHidenNow;
     private float _searchPanelSize;
@@ -52,7 +51,6 @@ public class UpperMenuBehaviourController : MonoBehaviour {
     private void Awake()
     {
         _searchPanelSize = _searchPanel.sizeDelta.y;
-        _appPanelScrollRect = _appPanel.GetComponent<ScrollRect>();
     }
 
     private void ShowSearchPanel(bool isShow)
