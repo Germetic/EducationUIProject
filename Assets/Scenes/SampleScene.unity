@@ -1110,6 +1110,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 4
   ChoseCategoryButton: {fileID: 52763959}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &59889000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1809,46 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f62eb593ae1fe6242a9769155ec6333c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &112897665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 112897667}
+  - component: {fileID: 112897666}
+  m_Layer: 0
+  m_Name: LoadProductsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &112897666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112897665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e4023d756ef4b4d8a314ab139d3656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &112897667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112897665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 540, y: 960, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130409453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,6 +2707,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 2
   ChoseCategoryButton: {fileID: 218294696}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &218294696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3159,6 +3211,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 4
   ChoseCategoryButton: {fileID: 262108362}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &262108362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7766,6 +7824,12 @@ MonoBehaviour:
     rgba: 4280440830
   CategoryName: 3
   ChoseCategoryButton: {fileID: 591760149}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &603433872
 GameObject:
   m_ObjectHideFlags: 0
@@ -8651,7 +8715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDraggingNow: 0
-  PercentToHideSearchPanel: 50
+  PercentToHideSearchPanel: 10
   _animationSpeed: 0.05
   _searchPanel: {fileID: 1258118636}
   _appPanel: {fileID: 411996606}
@@ -8745,7 +8809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a335b0fd8fa0af8418403a241f7b2864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddNewProductController: {fileID: 1815102747}
+  LoadProductsController: {fileID: 112897666}
   CategoryBlockPrefab: {fileID: 1912724585020596, guid: b32270cee533a9e4698ced3ae94bc9e7,
     type: 2}
   AppBlockPrefab: {fileID: 1929112612540724, guid: da3fd63141a41534da40fbf74f7b57bb,
@@ -10853,6 +10917,12 @@ MonoBehaviour:
     rgba: 4282587134
   CategoryName: 1
   ChoseCategoryButton: {fileID: 805202778}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &806324855
 GameObject:
   m_ObjectHideFlags: 0
@@ -12183,7 +12253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDraggingNow: 0
-  PercentToHideSearchPanel: 50
+  PercentToHideSearchPanel: 10
   _animationSpeed: 0.05
   _searchPanel: {fileID: 876575753}
   _appPanel: {fileID: 1934002290}
@@ -12199,7 +12269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a335b0fd8fa0af8418403a241f7b2864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AddNewProductController: {fileID: 1815102747}
+  LoadProductsController: {fileID: 112897666}
   CategoryBlockPrefab: {fileID: 1425442550236704, guid: 4f552d33ba5e14c4f9985ee63e4a572d,
     type: 2}
   AppBlockPrefab: {fileID: 1923611477352156, guid: b8e827429febd624da8a2e15ad9520a7,
@@ -12601,6 +12671,12 @@ MonoBehaviour:
     rgba: 4282587134
   CategoryName: 1
   ChoseCategoryButton: {fileID: 908517972}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &908517972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14704,6 +14780,12 @@ MonoBehaviour:
     rgba: 4283997456
   CategoryName: 0
   ChoseCategoryButton: {fileID: 1068670775}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &1068670775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17292,6 +17374,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 2
   ChoseCategoryButton: {fileID: 1279899372}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &1280686888
 GameObject:
   m_ObjectHideFlags: 0
@@ -18939,6 +19027,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 0
   ChoseCategoryButton: {fileID: 1399525193}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &1400043682
 GameObject:
   m_ObjectHideFlags: 0
@@ -22144,6 +22238,12 @@ MonoBehaviour:
     rgba: 4283997456
   CategoryName: 0
   ChoseCategoryButton: {fileID: 1699901223}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1 &1701905338
 GameObject:
   m_ObjectHideFlags: 0
@@ -22720,6 +22820,12 @@ MonoBehaviour:
     rgba: 0
   CategoryName: 0
   ChoseCategoryButton: {fileID: 1713175227}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &1713175227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27546,6 +27652,12 @@ MonoBehaviour:
     rgba: 4280440830
   CategoryName: 3
   ChoseCategoryButton: {fileID: 2060600396}
+  TRANSPARENT:
+    serializedVersion: 2
+    rgba: 2365587455
+  NONTRANSPARENT:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!114 &2060600396
 MonoBehaviour:
   m_ObjectHideFlags: 0

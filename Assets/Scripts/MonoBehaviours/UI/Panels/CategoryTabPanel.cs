@@ -11,11 +11,15 @@ public class CategoryTabPanel : MonoBehaviour
     public Color32 CategoryColor;
     public Product.Categories CategoryName;
     public Button ChoseCategoryButton;
+    [SerializeField]
+    private Color32 TRANSPARENT;
+    [SerializeField]
+    private Color32 NONTRANSPARENT;
 
     public void Chose(bool isChosed)
     {
         IsChosed = isChosed;
-        Title.color = new Color32(255,255,255,isChosed? (byte)255 : (byte)140);
+        Title.color = isChosed ? NONTRANSPARENT : TRANSPARENT;
         ChosedMark.SetActive(isChosed);
     }
 

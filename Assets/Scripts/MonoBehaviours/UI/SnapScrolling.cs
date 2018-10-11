@@ -65,12 +65,13 @@ public class SnapScrolling : MonoBehaviour
             }
         }
         float scrollVelocity = Mathf.Abs(scrollRect.velocity.x);
-        if (scrollVelocity < InertiaDisablingScrollVelocity && !_isScrolling) scrollRect.inertia = false;
-        if (_isScrolling || scrollVelocity > InertiaDisablingScrollVelocity) return;
-        _contentVector.x = Mathf.SmoothStep(
-            _contentRect.anchoredPosition.x,
-            _pansPos[_selectedPanID].x +
-            SnapPointOffset, SnapSpeed * Time.fixedDeltaTime);
+
+        if (scrollVelocity < InertiaDisablingScrollVelocity && !_isScrolling)
+            scrollRect.inertia = false;
+        if (_isScrolling || scrollVelocity > InertiaDisablingScrollVelocity)
+            return;
+
+        _contentVector.x = Mathf.SmoothStep(_contentRect.anchoredPosition.x,_pansPos[_selectedPanID].x + SnapPointOffset, SnapSpeed * Time.fixedDeltaTime);
         _contentRect.anchoredPosition = _contentVector;
     }
 

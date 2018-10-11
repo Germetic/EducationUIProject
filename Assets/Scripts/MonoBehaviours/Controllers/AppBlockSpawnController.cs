@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AppBlockSpawnController : MonoBehaviour
 {   
-    public AddNewProductController AddNewProductController;
+    public LoadProductsController LoadProductsController;
     public GameObject CategoryBlockPrefab;
     public GameObject AppBlockPrefab;
     public Transform Content;
@@ -24,12 +24,13 @@ public class AppBlockSpawnController : MonoBehaviour
     }
 
     private void ClearContent()
-    {
+    {          
         int childsCount = Content.transform.childCount;
         for (int i = childsCount - 1; i > 0; i--)
-        {
+        {   
             Destroy(Content.GetChild(i).gameObject);
         }
+        Resources.UnloadUnusedAssets();
     }
 
     private void Awake()
@@ -39,7 +40,7 @@ public class AppBlockSpawnController : MonoBehaviour
 
     private void LoadProducts()
     {
-        _products = AddNewProductController.ReadJson(_jsonFileName);
+        _products = LoadProductsController.GetProductsFromJson(_jsonFileName);
     }
 
     private void CreateSubcategoriesList(Product.Categories chosedCategory)

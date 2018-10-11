@@ -35,5 +35,6 @@ public class ImageDrawer : MonoBehaviour
         Sprite loadedSprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
         if(imageToInsert != null)
         imageToInsert.sprite = loadedSprite;
+        
     }
 }

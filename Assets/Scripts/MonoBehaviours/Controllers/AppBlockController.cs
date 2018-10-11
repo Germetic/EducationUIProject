@@ -22,5 +22,5 @@ public class AppBlockController : MonoBehaviour
     private void Awake()
     {
         ShowDetails.onClick.AddListener(() => { ScreenController.Instance.DetailAppPanel.Initialize(Product); });        
-    }
+    }   
 }

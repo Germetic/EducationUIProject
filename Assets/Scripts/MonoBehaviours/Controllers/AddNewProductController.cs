@@ -67,11 +67,5 @@ public class AddNewProductController : MonoBehaviour {
 
         Debug.Log("<color=Green><b> Added , Products.Count : </b></color>" + CreatedProducts.AllProducts.Count);
     }
-    
-    public Products ReadJson(string jsonFileName)
-    {
-        TextAsset loadedFile = Resources.Load<TextAsset>(jsonFileName);
-        Products products = JsonUtility.FromJson<Products>(loadedFile.text);
-        return products;
-    }
+       
 }

@@ -55,4 +55,8 @@ public class ScreenController : MonoBehaviour
 
         CurrentOrientationScreenController.Show(_lastOrientationScreenController);
     }
+    private void OnDisable()
+    {
+        OrientationSwitchChecker.Instance.OnOrientationChange -= SwitchScreenOrientation;
+    }
 }
