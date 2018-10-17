@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CategoriesSwitchController : MonoBehaviour
 {
     public AppBlockSpawnController AppBlockSpawnController;
-    public Product.Categories SelectedCategory;
+    public Categories SelectedCategory;
     public Image HeaderColorBackground;
     [Space]
     public CategoryTabPanel GameCategoryTab;
@@ -16,23 +16,25 @@ public class CategoriesSwitchController : MonoBehaviour
     [Space]
     public List<CategoryTabPanel> AllCategoriesTabs;
 
-    private void Awake()
+    private void OnEnable()
     {
         InitializeCategoriesTabs();
     }
+    private void OnDisable()
+    {
+        for (int i = 0; i < AllCategoriesTabs.Count; i++)
+        {            
+            AllCategoriesTabs[i].ChoseCategoryButton.onClick.RemoveAllListeners();
+        }
+    }
 
     private void InitializeCategoriesTabs()
-    {
-        AllCategoriesTabs = new List<CategoryTabPanel>();
-
-        AllCategoriesTabs.Add(GameCategoryTab);
-        AllCategoriesTabs.Add(MusicCategoryTab);
-        AllCategoriesTabs.Add(FilmsCategoryTab);
-
-        AllCategoriesTabs[0].ChoseCategoryButton.onClick.AddListener(() => ChoseCategory(AllCategoriesTabs[0]));
-        AllCategoriesTabs[1].ChoseCategoryButton.onClick.AddListener(() => ChoseCategory(AllCategoriesTabs[1]));
-        AllCategoriesTabs[2].ChoseCategoryButton.onClick.AddListener(() => ChoseCategory(AllCategoriesTabs[2]));
-
+    {      
+        for (int i = 0; i < AllCategoriesTabs.Count; i++)
+        {
+            CategoryTabPanel categoriesSwitchController = AllCategoriesTabs[i];
+            AllCategoriesTabs[i].ChoseCategoryButton.onClick.AddListener(() => ChoseCategory(categoriesSwitchController));
+        }       
     }
     private void Start()
     {
@@ -57,7 +59,7 @@ public class CategoriesSwitchController : MonoBehaviour
         AppBlockSpawnController.SpawnBlocksByCategory(chosedCategory.CategoryName);
     }
 
-    public void ChoseCategory(Product.Categories chosedCategory)
+    public void ChoseCategory(Categories chosedCategory)
     {
         for (int i = 0; i < AllCategoriesTabs.Count; i++)
         {

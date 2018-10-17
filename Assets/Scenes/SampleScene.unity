@@ -1292,7 +1292,10 @@ MonoBehaviour:
   GameCategoryTab: {fileID: 1699901224}
   MusicCategoryTab: {fileID: 591760150}
   FilmsCategoryTab: {fileID: 805202779}
-  AllCategoriesTabs: []
+  AllCategoriesTabs:
+  - {fileID: 1699901224}
+  - {fileID: 591760150}
+  - {fileID: 805202779}
 --- !u!1 &83571685
 GameObject:
   m_ObjectHideFlags: 0

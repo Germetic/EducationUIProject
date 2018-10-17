@@ -9,7 +9,7 @@ public class CategoryTabPanel : MonoBehaviour
     public GameObject ChosedMark;
     public bool IsChosed;
     public Color32 CategoryColor;
-    public Product.Categories CategoryName;
+    public Categories CategoryName;
     public Button ChoseCategoryButton;
     [SerializeField]
     private Color32 TRANSPARENT;

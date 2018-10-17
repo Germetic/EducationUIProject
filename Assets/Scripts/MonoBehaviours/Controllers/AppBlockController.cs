@@ -19,8 +19,12 @@ public class AppBlockController : MonoBehaviour
         IsRecommendArrow.SetActive(product.IsRecommend);
         gameObject.name = "APP_" + product.Title;
     }
-    private void Awake()
+    private void OnEnable()
     {
         ShowDetails.onClick.AddListener(() => { ScreenController.Instance.DetailAppPanel.Initialize(Product); });        
-    }   
+    }
+    private void OnDisable()
+    {
+        ShowDetails.onClick.RemoveAllListeners();
+    }
 }

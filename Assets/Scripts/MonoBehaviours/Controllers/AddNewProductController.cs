@@ -25,10 +25,15 @@ public class AddNewProductController : MonoBehaviour {
 
     public Products CreatedProducts;
 
-    private void Awake()
+    private void OnEnable()
     {          
         AddProductBtn.onClick.AddListener(AddNewProduct);
         CreateJsonBtn.onClick.AddListener(CreateJson);
+    }
+    private void OnDisable()
+    {
+        AddProductBtn.onClick.RemoveAllListeners();
+        CreateJsonBtn.onClick.RemoveAllListeners();
     }
 
     public void CreateJson()
@@ -58,7 +63,7 @@ public class AddNewProductController : MonoBehaviour {
             float.Parse(RatingFld.text),
             Int32.Parse(SizeFld.text),
             Int32.Parse(DownloadsFld.text),
-            (Product.Categories)CategoryDPD.value,
+            (Categories)CategoryDPD.value,
             BlockTypeFld.text
             );
         CreatedProducts.AllProducts.Add(product);

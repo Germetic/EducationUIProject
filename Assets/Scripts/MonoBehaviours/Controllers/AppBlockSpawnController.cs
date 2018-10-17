@@ -16,7 +16,7 @@ public class AppBlockSpawnController : MonoBehaviour
     private List<string> _subCategoriesToSpawn;
     private Products _products;
 
-    public void SpawnBlocksByCategory(Product.Categories chosedCategory)
+    public void SpawnBlocksByCategory(Categories chosedCategory)
     {
         ClearContent();
         CreateSubcategoriesList(chosedCategory);
@@ -43,7 +43,7 @@ public class AppBlockSpawnController : MonoBehaviour
         _products = LoadProductsController.GetProductsFromJson(_jsonFileName);
     }
 
-    private void CreateSubcategoriesList(Product.Categories chosedCategory)
+    private void CreateSubcategoriesList(Categories chosedCategory)
     {   
         if(_products == null)
         {
@@ -63,7 +63,7 @@ public class AppBlockSpawnController : MonoBehaviour
         }
     }
 
-    private void SpawnBlocks(Product.Categories chosedCategory)
+    private void SpawnBlocks(Categories chosedCategory)
     {
         for (int i = 0; i < _subCategoriesToSpawn.Count; i++)
         {

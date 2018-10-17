@@ -19,11 +19,15 @@ public class DetailAppPanel : MonoBehaviour
 
     public Product CurrentProduct;
 
-    private void Awake()
+    private void OnEnable()
     {
         ReturnBtn.onClick.AddListener(()=>{ Hide();});
     }
-    
+    private void OnDisable()
+    {
+        ReturnBtn.onClick.RemoveAllListeners();
+    }
+
     /// <summary>
     /// Assign information to display and show panel
     /// </summary>

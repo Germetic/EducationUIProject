@@ -22,7 +22,7 @@ public class OrientationScreenController : MonoBehaviour {
         private set {}
     }
 
-    public Product.Categories CurrentCategory
+    public Categories CurrentCategory
     {
         get
         {

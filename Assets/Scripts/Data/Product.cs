@@ -1,7 +1,6 @@
 ﻿[System.Serializable]
 public class Product
 {
-    public enum Categories {Game,Film,Book,Music,Press}
     public Categories Category;    
     public string SubCategory;
     public string Icon;
